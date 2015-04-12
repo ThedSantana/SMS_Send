@@ -11,6 +11,7 @@ import android.widget.Toast;
  * Created by Diego on 12/04/2015.
  */
 public class SMSReceiver extends BroadcastReceiver {
+
     @Override
     public void onReceive(Context context, Intent intent) {
 
@@ -20,10 +21,9 @@ public class SMSReceiver extends BroadcastReceiver {
 
         for(int n=0;n<messages.length;n++){
             smsMessage[n]=SmsMessage.createFromPdu((byte[])messages[n]);
+      }
 
 
-
-        }
         Toast toast =Toast.makeText(context,"SMS Recibido: "+ smsMessage[0].getMessageBody(),Toast.LENGTH_LONG);
         toast.show();
 
