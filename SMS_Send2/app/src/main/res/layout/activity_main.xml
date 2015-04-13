@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:weightSum="1">
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,7 +25,7 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/editPhone"
-        android:text="2235776581" />
+        android:text="2266630806" />
 
     <EditText
         android:layout_width="match_parent"
@@ -35,7 +36,8 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btnEnviar"
         android:layout_toStartOf="@+id/btnEnviar"
-        android:hint="Escriba Mensaje" />
+        android:hint="Escriba Mensaje"
+        android:text="#124#" />
 
     <Button
         android:layout_width="match_parent"
@@ -45,11 +47,67 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="APN "
-        android:id="@+id/Btn_Apn" />
+        android:layout_weight="0.23">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="APN ? "
+            android:id="@+id/Btn_Apn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1 Foto"
+            android:id="@+id/Btn_Foto" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Off Alarma"
+            android:id="@+id/TB_Activar"
+            android:checked="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:text="Set MMSC"
+            android:id="@+id/Btn_Set_MMSC" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set APN"
+            android:id="@+id/button2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button3" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button4" />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button5" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,7 +121,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="213dp"
         android:text="SMS Recibido..."
         android:id="@+id/textSmsRecibir"
         android:layout_below="@+id/textRxTelefono"

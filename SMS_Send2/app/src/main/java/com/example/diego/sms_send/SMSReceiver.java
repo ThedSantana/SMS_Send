@@ -24,7 +24,8 @@ public class SMSReceiver extends BroadcastReceiver {
       }
 
 
-        Toast toast =Toast.makeText(context,"SMS Recibido: "+ smsMessage[0].getMessageBody(),Toast.LENGTH_LONG);
+        Toast toast =Toast.makeText(context,"SMS Recibido: "+ smsMessage[0].getMessageBody()+" "+
+                smsMessage[1].getMessageBody(),Toast.LENGTH_LONG);
         toast.show();
 
     }

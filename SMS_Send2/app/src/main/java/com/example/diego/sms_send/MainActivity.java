@@ -16,9 +16,9 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
     EditText PhoneTx,SmsTx;
     TextView SmsRx,PhoneRx;
-    Button BtnEnviar,BtnAPN;
+    Button BtnEnviar,BtnAPN,Btn_Foto;
     String Numero,Mensaje;
-    String TAG_APN="#55#";
+    String TAG_APN="#55#",TAG_FOTO="#03#";
 
 
     @Override
@@ -49,6 +49,15 @@ public class MainActivity extends ActionBarActivity {
                 sendSMS(Numero, Mensaje);
             }
         });
+        Btn_Foto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Numero=PhoneTx.getText().toString();
+                Mensaje=TAG_FOTO;
+                sendSMS(Numero, Mensaje);
+            }
+        });
+
 
     }
 
@@ -59,7 +68,7 @@ public class MainActivity extends ActionBarActivity {
         private void sendSMS(String phoneNumber, String message)
         {
             PendingIntent sentPI = PendingIntent.getActivity(this, 0,
-                    new Intent(this,MainActivity.class), 0);
+                    new Intent(getApplicationContext(),MainActivity.class), 0);
             SmsManager sms = SmsManager.getDefault();
             sms.sendTextMessage(phoneNumber, null, message, sentPI, null);
 
@@ -77,6 +86,7 @@ public class MainActivity extends ActionBarActivity {
         PhoneRx=(TextView)findViewById(R.id.textRxTelefono);
         BtnEnviar=(Button) findViewById(R.id.btnEnviar);
         BtnAPN=(Button) findViewById(R.id.Btn_Apn);
+        Btn_Foto=(Button) findViewById(R.id.Btn_Foto);
     }
 
 
