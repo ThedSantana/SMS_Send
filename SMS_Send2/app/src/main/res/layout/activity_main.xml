@@ -50,8 +50,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.23">
+        android:layout_height="88dp"
+        >
 
         <Button
             android:layout_width="wrap_content"
@@ -68,16 +68,30 @@
         <ToggleButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Off Alarma"
             android:id="@+id/TB_Activar"
             android:checked="false" />
 
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Set APN"
+                android:id="@+id/button2" />
+
+
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="77dp"
+            android:layout_height="match_parent"
             android:text="Set MMSC"
             android:id="@+id/Btn_Set_MMSC" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:text="Audios"
+        android:id="@+id/textView3" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -87,26 +101,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Set APN"
-            android:id="@+id/button2" />
+            android:text="Intrusion"
+            android:id="@+id/Btn_AudioIntrusion" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button3" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button4" />
-
-        <Button
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button5" />
+            android:text="Ac no Autoriz"
+            android:id="@+id/Btn_AudioAccNoAut" />
     </LinearLayout>
 
     <TextView
@@ -121,7 +123,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="213dp"
+        android:layout_height="117dp"
         android:text="SMS Recibido..."
         android:id="@+id/textSmsRecibir"
         android:layout_below="@+id/textRxTelefono"
